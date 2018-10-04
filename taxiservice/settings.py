@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'taxiservice.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dblva3o1ihlm6',
-        'USER': 'maqtupoqhdqwek',
+        'NAME': 'd4jgjh2fckqtdp',
+        'USER': 'slfznmfzfbehxl',
         'HOST': 'ec2-50-17-225-140.compute-1.amazonaws.com',
-        'PASSWORD': 'e4edd6606aced97e7edf1bc6ef29d0484c85663acf2e8f7ca9091b084549fbd0',
+        'PASSWORD': '896620148fb7a43c6af25692d79bf49bd5198f8c53301b84624ed54dcee31051',
         'PORT': '5432',
     }
 }
