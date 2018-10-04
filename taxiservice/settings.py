@@ -25,7 +25,7 @@ SECRET_KEY = 'yhotdehcdsmt!5+gol-1(&s+(rdo176v_3f4bzj0ngymx+#r&#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [127.0.0.1,'localhost', 'http://codemohitapp.herokuapp.com/','https://codemohitapp.herokuapp.com/']
+ALLOWED_HOSTS = [127.0.0.1,'localhost', 'http://techcodeapp.herokuapp.com/','https://techcodeapp.herokuapp.com/']
 
 
 # Application definition
