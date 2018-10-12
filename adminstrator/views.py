@@ -9,7 +9,7 @@ from .models import Car
 
 
 
-def addcars(request, carid = 0):
+def addcar(request, carid = 0):
 
 	if request.method == 'POST' and request.FILES['carimage']:
 		carname = request.POST["name"]
@@ -45,13 +45,11 @@ def addcars(request, carid = 0):
 		context = {'editCarObject':editCarObject}
 
 	
-	return render(request, 'adminstrator/addcars.html', context)
+	return render(request, 'adminstrator/addcar.html', context)
 
-def carlist(request):
 
-	carList = Car.objects.all().order_by("-id")
-	context = {'carList':carList}
-	return render(request, 'adminstrator/carlist.html', context)
+
+
 
 def icons(request):
 	context={}
@@ -71,7 +69,10 @@ def upgrade(request):
 	context={}
 	return render(request, 'adminstrator/upgrade.html', context)
 
-
+def carlist(request):
+	carList = Car.objects.all().order_by("-id")
+	context = {'carLst':carList}
+	return render(request, 'adminstrator/carlist.html', context)
 
 
 def table(request):

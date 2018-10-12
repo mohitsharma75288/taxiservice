@@ -92,7 +92,7 @@ def addcar(request, carid = 0):
 		context = {'editCarObject':editCarObject}
 
 	
-	return render(request, 'home/addcars.html', context)
+	return render(request, 'home/addcar.html', context)
 
 
 

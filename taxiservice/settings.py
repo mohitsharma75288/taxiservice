@@ -25,14 +25,13 @@ SECRET_KEY = 'yhotdehcdsmt!5+gol-1(&s+(rdo176v_3f4bzj0ngymx+#r&#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [127.0.0.1,'localhost', 'http://techcodeapp.herokuapp.com/','https://techcodeapp.herokuapp.com/']
-
+ALLOWED_HOSTS = []
 
 # Application definition
 
 INSTALLED_APPS = [
-    'home',
-    'adminstrator',
+    'home.apps.HomeConfig',
+    'adminstrator.apps.AdminstratorConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -49,8 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
-]
+    ]
 
 ROOT_URLCONF = 'taxiservice.urls'
 
@@ -79,10 +77,10 @@ WSGI_APPLICATION = 'taxiservice.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd4jgjh2fckqtdp',
-        'USER': 'slfznmfzfbehxl',
-        'HOST': 'ec2-50-17-225-140.compute-1.amazonaws.com',
-        'PASSWORD': '896620148fb7a43c6af25692d79bf49bd5198f8c53301b84624ed54dcee31051',
+        'NAME': 'admin1',
+        'USER': 'postgres',
+        'HOST': 'localhost',
+        'PASSWORD': '12345',
         'PORT': '5432',
     }
 }
@@ -145,4 +143,3 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'baljeetcodeapp@gmail.com'
 EMAIL_HOST_PASSWORD = 'jiteshsir'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
