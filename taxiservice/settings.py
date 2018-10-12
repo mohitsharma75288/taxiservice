@@ -25,7 +25,7 @@ SECRET_KEY = 'yhotdehcdsmt!5+gol-1(&s+(rdo176v_3f4bzj0ngymx+#r&#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS =  [127.0.0.1,'localhost', 'http://taxiservice.herokuapp.com/','https://practicework.herokuapp.com/']
 
 # Application definition
 
@@ -48,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+      'whitenoise.middleware.WhiteNoiseMiddleware',
     ]
 
 ROOT_URLCONF = 'taxiservice.urls'
@@ -77,10 +78,10 @@ WSGI_APPLICATION = 'taxiservice.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'admin1',
-        'USER': 'postgres',
-        'HOST': 'localhost',
-        'PASSWORD': '12345',
+        'NAME': 'df8miorpqacfnp',
+        'USER': 'jooohdsxojfffc',
+        'HOST':'ec2-54-235-90-0.compute-1.amazonaws.com',,
+        'PASSWORD': '36cc0ef6e2d364eabb2e0e540ea6ef5591c82e2359e4c5bab7329c51b7d59152',
         'PORT': '5432',
     }
 }
