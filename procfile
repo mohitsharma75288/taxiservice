@@ -1,3 +1,0 @@
- web: gunicorn taxiservice.wsgi
- web: gunicorn home:home
- web: gunicorn adminstrator:adminstrator
