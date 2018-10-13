@@ -30,14 +30,14 @@ ALLOWED_HOSTS =  [127.0.0.1,'localhost', 'http://taxiserviceapp.herokuapp.com/',
 # Application definition
 
 INSTALLED_APPS = [
-    'home.apps.HomeConfig',
-    'adminstrator.apps.AdminstratorConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'home',
+    'adminstrator',
 ]
 
 MIDDLEWARE = [
@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'taxiservice.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': dfl4c18q0u7ri8
-        'USER': fgxhkeyxxiuhxd
-        'HOST':  ec2-107-20-211-10.compute-1.amazonaws.com
-        'PASSWORD': 99f9c4a85667615f879552f987ea5a3954e06165d33152642cc7163421d6df7b
+        'NAME': 'dfl4c18q0u7ri8',
+        'USER': 'fgxhkeyxxiuhxd',
+        'HOST':  'ec2-107-20-211-10.compute-1.amazonaws.com',
+        'PASSWORD': '99f9c4a85667615f879552f987ea5a3954e06165d33152642cc7163421d6df7b',
         'PORT': '5432',
     }
 }
