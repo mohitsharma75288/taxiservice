@@ -1,7 +1,5 @@
-camelcase==0.2
-Django==1.11.16 
-gunicorn==19.9.0 
-mysql-connector==2.1.6
+Django==1.11.16
+gunicorn==19.9.0
 psycopg2==2.7.5
 pytz==2018.5
-whitenoise==4.1 
+whitenoise==4.1

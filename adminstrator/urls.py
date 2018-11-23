@@ -1,23 +1,24 @@
-from . import views
-from django.urls import path, include
+from django.conf.urls import url, include
+from adminstrator import views
+
 
 app_name = 'adminstrator'
 
 urlpatterns = [
    
-    path('dashboard', views.dashboard, name='dashboard'),
-    path('icons', views.icons, name='icons'),
-    path('maps', views.maps, name='maps'),
+    url('dashboard', views.dashboard, name='dashboard'),
+    url('icons', views.icons, name='icons'),
+    url('maps', views.maps, name='maps'),
     
-    path('carlist', views.carlist, name='carlist'),
+    url('carlist', views.carlist, name='carlist'),
    
-    path('typography', views.typography, name='typography'),
-    path('table', views.table, name='table'),
-    path('notifications', views.notifications, name='notifications'),
-    path('user', views.user, name='user'),
-    path('upgrade', views.upgrade, name='upgrade'),
-    path('addcar', views.addcar, name='addcar'),
-    path('editcar/<int:carid>', views.addcar, name='addcar'),
-    path('updatecar', views.updatecar, name='updatecar'),
-    path('delete/<int:carid>', views.deletecar, name='deletecar'),
+    url('typography', views.typography, name='typography'),
+    url('table', views.table, name='table'),
+    url('notifications', views.notifications, name='notifications'),
+    url('user', views.user, name='user'),
+    url('upgrade', views.upgrade, name='upgrade'),
+    url('addcar', views.addcar, name='addcar'),
+    url('editcar/<int:carid>', views.addcar, name='addcar'),
+    url('updatecar', views.updatecar, name='updatecar'),
+    url('delete/<int:carid>', views.deletecar, name='deletecar'),
 ]
