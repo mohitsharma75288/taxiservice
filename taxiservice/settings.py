@@ -123,6 +123,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 STATICFILES_DIRS = [
@@ -144,3 +145,5 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'baljeetcodeapp@gmail.com'
 EMAIL_HOST_PASSWORD = 'jiteshsir'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
