@@ -13,7 +13,7 @@ urlpatterns = [
    
     path('typography', views.typography, name='typography'),
     path('table', views.table, name='table'),
-    path('notification', views.notification, name='notification'),
+    path('notifications', views.notifications, name='notifications'),
     path('user', views.user, name='user'),
     path('upgrade', views.upgrade, name='upgrade'),
     path('addcar', views.addcar, name='addcar'),

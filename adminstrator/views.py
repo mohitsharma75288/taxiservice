@@ -88,9 +88,9 @@ def maps(request):
 	context={}
 	return render(request, 'adminstrator/maps.html', context)
 
-def notification(request):
+def notifications(request):
 	context={}
-	return render(request, 'adminstrator/notification.html', context)
+	return render(request, 'adminstrator/notifications.html', context)
 
 
 def deletecar(request, carid):

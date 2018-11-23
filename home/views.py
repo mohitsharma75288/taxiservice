@@ -56,46 +56,6 @@ def cars(request):
 	return render(request, 'home/cars.html', context)
 
 
-def addcar(request, carid = 0):
-
-	if request.method == 'POST' and request.FILES['carimage']:
-		carname = request.POST["name"]
-		msi = request.POST["msi"]
-		price = request.POST["price"]
-		capacity  = request.POST["capacity"]
-		aircondition  = request.POST["aircondition"]
-		transmission  = request.POST["transmission"]
-		description  = request.POST["description"]
-		carimage = request.FILES['carimage']
-		fs = FileSystemStorage()
-		filename = fs.save(carimage.name, carimage)
-		carimagename = fs.url(filename)
-
-		carObject = Car()
-		carObject.name = carname
-		carObject.msi = msi
-		carObject.description = description
-		carObject.price = price
-		carObject.capacity = capacity
-		carObject.aircondition = aircondition
-		carObject.transmission = transmission
-		carObject.carimage = carimagename
-
-		carObject.save()
-
-
-
-	context = {}
-
-	if carid > 0:
-		editCarObject  = Car.objects.get(id=carid)
-		context = {'editCarObject':editCarObject}
-
-	
-	return render(request, 'home/addcar.html', context)
-
-
-
 def blog1(request):
 
 	context = {}
@@ -109,46 +69,7 @@ def blog2(request):
 
 
 
-def deletecar(request, carid):
 
-	Car.objects.filter(id=carid).delete()
-	return redirect('/carlist')
-
-
-def updatecar(request):
-
-	if request.method == 'POST':
-		carid = request.POST["hdnCarId"]
-		carname = request.POST["name"]
-		msi = request.POST["msi"]
-		price = request.POST["price"]
-		capacity  = request.POST["capacity"]
-		aircondition  = request.POST["aircondition"]
-		transmission  = request.POST["transmission"]
-		description  = request.POST["description"]
-
-		if len(request.FILES) > 0 :
-			carimage = request.FILES['carimage']
-			fs = FileSystemStorage()
-			filename = fs.save(carimage.name, carimage)
-			carimagename = fs.url(filename)
-		else :
-			carimagename = request.POST["hdnImage"]
-
-
-		updateCarObject = Car.objects.get(id=carid)
-		updateCarObject.name = carname
-		updateCarObject.msi = msi
-		updateCarObject.description = description
-		updateCarObject.price = price
-		updateCarObject.capacity = capacity
-		updateCarObject.aircondition = aircondition
-		updateCarObject.transmission = transmission
-		updateCarObject.carimage = carimagename
-
-		updateCarObject.save()
-
-	return redirect('/carlist')
 
 
 
