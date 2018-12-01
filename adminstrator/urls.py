@@ -1,17 +1,16 @@
+from . import views
 from django.conf.urls import url, include
-from adminstrator import views
-
-
-app_name = 'adminstrator'
 
 urlpatterns = [
    
-    url('dashboard', views.dashboard, name='dashboard'),
-    url('icons', views.icons, name='icons'),
+    url('', views.dashboard, name='dashboard'),
     url('maps', views.maps, name='maps'),
-    
     url('carlist', views.carlist, name='carlist'),
-   
+    url('highchart', views.charts, name='charts'),
+
+    url('booked', views.booked, name='booked'),
+    url('booking',views.booking, name='booking'),
+    url('signup', views.signup, name='signup'),
     url('typography', views.typography, name='typography'),
     url('table', views.table, name='table'),
     url('notifications', views.notifications, name='notifications'),
@@ -20,5 +19,6 @@ urlpatterns = [
     url('addcar', views.addcar, name='addcar'),
     url('editcar/<int:carid>', views.addcar, name='addcar'),
     url('updatecar', views.updatecar, name='updatecar'),
-    url('delete/<int:carid>', views.deletecar, name='deletecar'),
+    url('deletecar/<int:carid>', views.deletecar, name='deletecar'),
+
 ]
