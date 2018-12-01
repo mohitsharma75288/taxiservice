@@ -6,6 +6,9 @@ from django.conf import settings
 
 from .models import Car
 # Create your views here.
+def charts(request):
+	context={}
+	return render(request, 'home/highchart.html', context)
 
 
 
