@@ -4,7 +4,7 @@ from home import views
 app_name = 'home'
 
 urlpatterns = [
-    url('', views.home, name='home'),
+    url('home', views.home, name='home'),
     
     url('about', views.about, name='about'),
     url('cars', views.cars, name='cars'),
