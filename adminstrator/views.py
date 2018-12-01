@@ -8,7 +8,7 @@ from .models import Car
 # Create your views here.
 def charts(request):
 	context={}
-	return render(request, 'home/highchart.html', context)
+	return redirect(request, 'home/highchart.html', context)
 
 
 
@@ -48,7 +48,7 @@ def addcar(request, carid = 0):
 		context = {'editCarObject':editCarObject}
 
 	
-	return render(request, 'adminstrator/addcar.html', context)
+	return redirect(request, 'adminstrator/addcar.html', context)
 
 
 
@@ -56,44 +56,44 @@ def addcar(request, carid = 0):
 
 def icons(request):
 	context={}
-	return render(request, 'adminstrator/icons.html', context)
+	return redirect(request, 'adminstrator/icons.html', context)
 
 
 def dashboard(request):
 	context={}
-	return render(request, 'adminstrator/dashboard.html', context)
+	return redirect(request, 'adminstrator/dashboard.html', context)
 
 
 def user(request):
 	context={}
-	return render(request, 'adminstrator/user.html', context)
+	return redirect(request, 'adminstrator/user.html', context)
 
 def upgrade(request):
 	context={}
-	return render(request, 'adminstrator/upgrade.html', context)
+	return redirect(request, 'adminstrator/upgrade.html', context)
 
 def carlist(request):
 	carList = Car.objects.all().order_by("-id")
 	context = {'carLst':carList}
-	return render(request, 'adminstrator/carlist.html', context)
+	return redirect(request, 'adminstrator/carlist.html', context)
 
 
 def table(request):
 	context={}
-	return render(request, 'adminstrator/table.html', context)
+	return redirect(request, 'adminstrator/table.html', context)
 
 
 def typography(request):
 	context={}
-	return render(request, 'adminstrator/typography.html', context)
+	return redirect(request, 'adminstrator/typography.html', context)
 
 def maps(request):
 	context={}
-	return render(request, 'adminstrator/maps.html', context)
+	return redirect(request, 'adminstrator/maps.html', context)
 
 def notifications(request):
 	context={}
-	return render(request, 'adminstrator/notifications.html', context)
+	return redirect(request, 'adminstrator/notifications.html', context)
 
 
 def deletecar(request, carid):
